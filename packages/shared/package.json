@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "npx tsc"
+    "clean": "rm tsconfig.tsbuildinfo && rm -rf ./dist",
+    "build": "yarn clean && npx tsc"
   },
   "dependencies": {
     "dotenv": "^16.0.1"
