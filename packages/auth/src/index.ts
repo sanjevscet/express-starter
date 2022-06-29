@@ -5,7 +5,7 @@ const app: Express = express();
 const port = Env.port;
 
 app.get("/", (_: Request, res: Response) => {
-  res.send("Express + Typescript server");
+  res.send("Express + Typescript server " + Env.dbConfig.dbPass + " " + Env.dbConfig.dbName);
 });
 
 app.listen(port, () => {
