@@ -1,18 +1,27 @@
 {
-  "name": "@san/db",
-  "version": "1.0.0",
-  "main": "./dist/index.js",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "clean": "rm -rf tsconfig.tsbuildinfo && rm -rf ./dist",
-    "build": "yarn clean && npx tsc",
-    "dev": "concurrently \"npx tsc --watch\"",
-    "migration:up": "yarn typeorm migration:run -d dist/data-source.js",
-    "migration:revert": "yarn typeorm migration:revert -d dist/data-source.js",
-    "migration:show": "yarn typeorm migration:show -d dist/data-source.js"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.1"
-  }
+    "name": "@san/db",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "clean": "rm -rf tsconfig.tsbuildinfo && rm -rf ./dist",
+        "build": "yarn clean && npx tsc",
+        "dev": "concurrently \"npx tsc --watch\"",
+        "lint": "tsc --noEmit && eslint \"*/**/*.ts\" --quiet --fix",
+        "migration:up": "yarn typeorm migration:run -d dist/data-source.js",
+        "migration:revert": "yarn typeorm migration:revert -d dist/data-source.js",
+        "migration:show": "yarn typeorm migration:show -d dist/data-source.js"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.1"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.30.4",
+        "@typescript-eslint/parser": "^5.30.4",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1"
+    }
 }
