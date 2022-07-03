@@ -4,6 +4,9 @@
       "path": "./packages/auth"
     },
     {
+      "path": "./packages/db"
+    },
+    {
       "path": "./packages/shared"
     }
   ]

@@ -3,24 +3,15 @@
   "version": "1.0.0",
   "main": "./src/index.ts",
   "scripts": {
-    "clean": "rm tsconfig.tsbuildinfo && rm -rf ./dist",
+    "clean": "rm -f tsconfig.tsbuildinfo && rm -rf ./dist",
     "build": "yarn clean && npx tsc",
     "start": "node dist/index.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
-    "mc": "typeorm migration:create",
-    "sh": "typeorm migration:show",
-    "mr": "npx typeorm migration:run",
-    "mg": "typeorm migration:create -f src/ormconfig.ts",
-    "to": "ts-node ./../../node_modules/typeorm/cli.js -f ./src/ormconfig.ts",
-    "m12": "typeorm migration:create \"./typeorm/migrations/",
-    "m11": "ts-node --transpile-only ../../node_modules/typeorm/cli.js migration:create -d ./src/ormconfig.ts\"./typeorm/migrations/",
-    "m13": "ts-node --transpile-only ../../node_modules/typeorm/cli.js migration:run -d ./src/ormconfig.ts",
-    "m14": "ts-node --transpile-only ../../node_modules/typeorm/cli.js migration:revert -d ./src/ormconfig.ts",
-    "m15": "ts-node --transpile-only ../../node_modules/typeorm/cli.js migration:show -d ./src/ormconfig.ts"
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   },
   "license": "MIT",
   "dependencies": {
     "@san/shared": "1.0.0",
+    "@san/db": "1.0.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mysql": "^2.18.1",

@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import express, { Express, Request, Response } from "express";
 import { Env } from "@san/shared";
-import connectionSource from "./ormconfig";
+import { AppDataSource } from "@san/db";
 import { exit } from "process";
 const app: Express = express();
 const port = Env.port;
@@ -12,7 +12,7 @@ app.get("/", (_: Request, res: Response) => {
 });
 
 app.listen(port, async() => {
-  const result = await connectionSource.initialize();
+  const result = await AppDataSource.initialize();
   if (!result) {
     console.error(`Unable to connect to db`);
 
