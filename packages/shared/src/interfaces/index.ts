@@ -1,2 +1,2 @@
-export { IEnv } from "./IEnv";
-export {IDbConfig} from './IDbConfig'
+export { IEnv } from './IEnv';
+export { IDbConfig } from './IDbConfig';

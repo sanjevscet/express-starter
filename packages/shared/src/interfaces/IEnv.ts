@@ -1,4 +1,4 @@
-import {IDbConfig} from "./IDbConfig"
+import { IDbConfig } from './IDbConfig';
 export interface IEnv extends IDbConfig {
-    port: number,
+    port: number;
 }
