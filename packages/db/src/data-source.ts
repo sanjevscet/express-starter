@@ -10,7 +10,7 @@ export const AppDataSource = new DataSource({
     database: "pdm",
     synchronize: false,
     logging: true,
-    entities: ['./models/**/*.js'],
+    entities: [__dirname+ '/models/**/*.js'],
     migrations: [__dirname + '/migrations/**/*.js'],
     subscribers: [],
 })
