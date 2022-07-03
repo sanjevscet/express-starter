@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "clean": "rm tsconfig.tsbuildinfo && rm -rf ./dist",
-    "build": "yarn clean && npx tsc"
+    "build": "yarn clean && npx tsc",
+    "dev": "concurrently \"npx tsc --watch\""
   },
   "dependencies": {
     "dotenv": "^16.0.1"
