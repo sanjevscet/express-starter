@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(routes);
 
 app.get('/', (_: Request, res: Response) => {
-    res.send('Express + Typescript server ' + Env.dbConfig.dbPass + ' ' + Env.dbConfig.dbName);
+    res.send('Express + Typescript server Sanjeev' + Env.dbConfig.dbPass + ' ' + Env.dbConfig.dbName);
 });
 
 app.listen(port, async () => {
